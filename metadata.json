@@ -1,0 +1,6 @@
+{
+  "name": "EIRL Datin Jimmy — Menuiserie Dozulé",
+  "description": "Site vitrine pour EIRL Datin Jimmy, artisan menuisier à Dozulé (14430). Menuiserie sur-mesure, fenêtres, parquets, isolation RGE Qualibat et agencement intérieur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
