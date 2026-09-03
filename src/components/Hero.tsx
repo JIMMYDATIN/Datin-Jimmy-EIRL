@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Phone, ShieldCheck, Award, CheckCircle2, Sparkles, MapPin } from 'lucide-react';
-import { COMPANY_INFO } from '../data/menuiserieData';
+import { ArrowRight, ShieldCheck, Award, CheckCircle2, MapPin } from 'lucide-react';
 import { SmartImage } from './SmartImage';
 
 export const Hero: React.FC = () => {
@@ -46,10 +45,7 @@ export const Hero: React.FC = () => {
 
             {/* Subheading */}
             <p className="text-base sm:text-lg text-[#55473A] leading-relaxed mb-8 max-w-2xl">
-              Entreprise artisanale transmise de <strong>père en fils</strong> dans le Calvados. 
-              Jimmy Datin façonne vos projets de menuiserie intérieure et extérieure : 
-              fenêtres et portes isolantes, mobilier sur-mesure, aménagements sécurisés pour enfants, 
-              parquets et isolation thermique certifiée RGE.
+              Dans son atelier du Pays d'Auge, Jimmy Datin façonne le bois avec la patience et la précision d'un artisan qui ne travaille jamais deux projets de la même manière. Menuiserie, charpente, isolation : trois savoir-faire réunis pour donner vie à vos projets, du premier trait de crayon à la dernière finition.
             </p>
 
             {/* Key Value Points */}
@@ -73,7 +69,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
               <a
                 id="hero-devis-cta"
                 href="#devis"
@@ -86,19 +82,10 @@ export const Hero: React.FC = () => {
               <a
                 id="hero-realisations-cta"
                 href="#realisations"
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#F5EFE6] text-[#332A23] text-base font-medium px-6 py-3.5 rounded-xl border border-[#D9CBB9] transition-all shadow-xs"
+                className="inline-flex items-center gap-1.5 text-[#5C4F42] hover:text-[#92400E] text-base font-medium transition-colors py-2 group"
               >
-                <Sparkles className="w-4 h-4 text-[#92400E]" />
-                <span>Voir nos réalisations</span>
-              </a>
-
-              <a
-                id="hero-phone-cta"
-                href={COMPANY_INFO.phoneTel}
-                className="inline-flex items-center justify-center gap-2 text-[#92400E] hover:text-[#78350F] text-sm font-bold px-3 py-3"
-              >
-                <Phone className="w-4 h-4" />
-                <span>{COMPANY_INFO.phoneFormatted}</span>
+                <span className="underline-offset-4 group-hover:underline">Voir nos réalisations</span>
+                <ArrowRight className="w-4 h-4 text-[#92400E] group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
@@ -111,18 +98,18 @@ export const Hero: React.FC = () => {
               {/* Main Card / Hero Image with guaranteed height */}
               <div className="relative h-[420px] sm:h-[460px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-[#261E17]">
                 <SmartImage
-                  src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
-                  fallbackSrc="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1200&q=80"
+                  src="/maison1.webp"
+                  fallbackSrc="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
                   alt="Charpente et menuiserie artisanale - EIRL Datin Jimmy à Dozulé"
                   className="w-full h-full object-cover"
                   containerClassName="h-full w-full"
-                  badge="Chantier & Atelier — Dozulé"
+                  badge="Colombages en chêne"
                 />
                 
                 {/* Overlay with subtle warm gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1F1C18]/95 via-[#1F1C18]/30 to-transparent flex flex-col justify-end p-6 text-white z-10">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#FDE68A] mb-1">
-                    Charpente & Menuiserie d'Art
+                    Charpente & Menuiserie
                   </span>
                   <p className="font-display text-xl sm:text-2xl font-bold">
                     Du bois brut aux finitions d'exception

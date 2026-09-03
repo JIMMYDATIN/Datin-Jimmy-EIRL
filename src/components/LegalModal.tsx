@@ -56,11 +56,25 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
             </ul>
           </div>
 
-          {/* Section 2: Certifications & Assurances */}
+          {/* Section 2: Conception & Réalisation du Site */}
+          <div>
+            <h4 className="font-bold text-[#1F1C18] uppercase tracking-wider text-xs mb-2 flex items-center gap-1.5">
+              <FileText className="w-4 h-4 text-[#92400E]" />
+              2. Conception & Développement du site
+            </h4>
+            <ul className="space-y-1 pl-4 list-disc">
+              <li><strong>Créateur & Webmaster :</strong> Hugo Fournier EI</li>
+              <li><strong>Site web :</strong> <a href="https://hugofournier.fr" target="_blank" rel="noopener noreferrer" className="text-[#92400E] underline hover:text-[#78350F]">hugofournier.fr</a></li>
+              <li><strong>SIREN :</strong> 107 042 475</li>
+              <li><strong>Activité :</strong> Conception, design graphique & développement web sur-mesure</li>
+            </ul>
+          </div>
+
+          {/* Section 3: Certifications & Assurances */}
           <div>
             <h4 className="font-bold text-[#1F1C18] uppercase tracking-wider text-xs mb-2 flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-[#15803D]" />
-              2. Certifications & Assurances Professionnelles
+              3. Certifications & Assurances Professionnelles
             </h4>
             <ul className="space-y-1 pl-4 list-disc">
               <li><strong>Qualification Qualibat RGE :</strong> {COMPANY_INFO.rgeNumber} (Reconnu Garant de l'Environnement).</li>
@@ -69,21 +83,20 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
             </ul>
           </div>
 
-          {/* Section 3: Propriété intellectuelle */}
+          {/* Section 4: Propriété intellectuelle */}
           <div>
             <h4 className="font-bold text-[#1F1C18] uppercase tracking-wider text-xs mb-2">
-              3. Propriété intellectuelle & Photos
+              4. Propriété intellectuelle & Droits d'auteur
             </h4>
             <p>
-              L’ensemble des contenus, textes, logos et photographies présents sur ce site sont la propriété exclusive de l'EIRL Datin Jimmy ou de ses partenaires. 
-              Les photographies de réalisations proviennent de chantiers réels de l'artisan (partagées notamment sur la page Facebook officielle).
+              L’ensemble des contenus, textes, logos et photographies présents sur ce site sont la propriété exclusive de l'EIRL Datin Jimmy ou de ses partenaires. La structure, l'ergonomie, les graphismes et le code source du site sont la propriété intellectuelle de <strong>Hugo Fournier EI</strong>. Toute reproduction ou utilisation non autorisée est strictement interdite.
             </p>
           </div>
 
-          {/* Section 4: Données personnelles RGPD */}
+          {/* Section 5: Données personnelles RGPD */}
           <div>
             <h4 className="font-bold text-[#1F1C18] uppercase tracking-wider text-xs mb-2">
-              4. Protection des données personnelles (RGPD)
+              5. Protection des données personnelles (RGPD)
             </h4>
             <p>
               Les informations recueillies via le formulaire de devis (nom, téléphone, email, commune) sont uniquement utilisées pour l'établissement de propositions commerciales et le suivi personnalisé de votre projet de menuiserie. Elles ne sont jamais cédées ni vendues à des tiers.

@@ -279,8 +279,8 @@ export const QuoteForm: React.FC = () => {
                     <option value="menuiserie">Menuiserie (Fenêtres, Portes, Meubles, Dressings, Cuisines, Parquets)</option>
                     <option value="charpente">Charpente (Traditionnelle, Rénovation toiture, Extension ossature bois)</option>
                     <option value="isolation">Isolation thermique & phonique (ISOVER / Qualibat RGE)</option>
-                    <option value="hors-norme">Un projet hors norme (Ouvrage architectural, Création unique)</option>
-                    <option value="autre">Autre demande spécifique</option>
+                    <option value="hors-norme">Une demande spécifique (Création sur-mesure, ouvrage singulier)</option>
+                    <option value="autre">Autre projet / Renseignement</option>
                   </select>
                 </div>
 

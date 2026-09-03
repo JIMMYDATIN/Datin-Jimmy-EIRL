@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ShieldCheck, HeartHandshake, Clock, CheckCircle2, FileText, Sparkles, HelpCircle } from 'lucide-react';
+import { Award, ShieldCheck, HeartHandshake, CheckCircle2, FileText, Sparkles, MapPin } from 'lucide-react';
 import { COMPANY_INFO } from '../data/menuiserieData';
 
 export const WhyChooseUs: React.FC = () => {
@@ -9,16 +9,14 @@ export const WhyChooseUs: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3.5 py-1.5 rounded-full border border-[#FDE68A] shadow-2xs mb-3">
-            <Award className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3.5 py-1.5 rounded-full border border-[#FDE68A] shadow-2xs mb-3">
             <span>QUALITÉ & CERTIFICATIONS</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1F1C18] tracking-tight mb-4">
-            Pourquoi Choisir EIRL Datin Jimmy ?
+            Pourquoi choisir Jimmy Datin ?
           </h2>
           <p className="text-base sm:text-lg text-[#615344] leading-relaxed">
-            Faire appel à un artisan indépendant, c’est la garantie d’un interlocuteur unique, 
-            d’un travail soigné dans le respect des traditions et d'une éligibilité complète aux aides de l'État.
+            Faire appel à un artisan indépendant certifié RGE, c’est la garantie d’un interlocuteur unique, d’un travail soigné dans le respect des traditions et d'une éligibilité complète aux aides de l'État.
           </p>
         </div>
 
@@ -134,26 +132,24 @@ export const WhyChooseUs: React.FC = () => {
             </p>
           </div>
 
-          {/* Pillar 3: Savoir-faire familial de père en fils */}
+          {/* Pillar 3: Expérience locale */}
           <div className="bg-[#FAF7F2] p-8 rounded-2xl border border-[#E2D6C5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#78350F] bg-[#EAE1D5] px-3 py-1 rounded-full mb-4 inline-block">
-                Tradition Artisanale
+                EXPÉRIENCE LOCALE
               </span>
 
               <div className="flex items-center gap-3.5 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-[#F5EFE6] text-[#92400E] flex items-center justify-center shrink-0 border border-[#E2D6C5]">
-                  <HeartHandshake className="w-7 h-7" />
+                  <MapPin className="w-7 h-7" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-[#1F1C18]">
-                  De Père en Fils à Dozulé
+                  Plus de 10 Ans d'Expérience dans le Pays d'Auge
                 </h3>
               </div>
 
               <p className="text-sm text-[#4E4135] leading-relaxed mb-4">
-                La passion du bois et du travail bien fait transmise au fil des générations. 
-                Jimmy Datin perpétue cet héritage avec un regard moderne, en associant les gestes traditionnels de la menuiserie 
-                aux technologies d'isolation et de quincaillerie les plus actuelles.
+                Jimmy Datin exerce son métier de menuisier-charpentier depuis 2011 dans le Calvados. Une expérience de terrain qui allie précision technique et connaissance fine des spécificités des bâtis normands.
               </p>
 
               <div className="space-y-2 text-xs sm:text-sm text-[#3E342B]">
@@ -169,25 +165,24 @@ export const WhyChooseUs: React.FC = () => {
             </div>
           </div>
 
-          {/* Pillar 4: Rigueur, Sécurité & Respect des délais */}
+          {/* Pillar 4: Rigueur & finitions soignées */}
           <div className="bg-[#FAF7F2] p-8 rounded-2xl border border-[#E2D6C5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#78350F] bg-[#EAE1D5] px-3 py-1 rounded-full mb-4 inline-block">
-                Engagement Client
+                ENGAGEMENT CLIENT
               </span>
 
               <div className="flex items-center gap-3.5 mb-3">
                 <div className="w-12 h-12 rounded-xl bg-[#F5EFE6] text-[#92400E] flex items-center justify-center shrink-0 border border-[#E2D6C5]">
-                  <Clock className="w-7 h-7" />
+                  <HeartHandshake className="w-7 h-7" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-[#1F1C18]">
-                  Rigueur & Sécurité des Finitions
+                  Rigueur & finitions soignées
                 </h3>
               </div>
 
               <p className="text-sm text-[#4E4135] leading-relaxed mb-4">
-                Que ce soit pour un lit superposé d'enfant avec barrière de sécurité renforcée ou pour la pose d'une baie vitrée, 
-                la sécurité et la propreté du chantier sont nos priorités absolues.
+                Jimmy Datin apporte le même soin à chaque étape du chantier, de la prise de mesure à la dernière finition — précision des ajustages, qualité des assemblages et respect des normes en vigueur pour chaque pose.
               </p>
 
               <div className="space-y-2 text-xs sm:text-sm text-[#3E342B]">
@@ -197,7 +192,7 @@ export const WhyChooseUs: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0" />
-                  <span>Respect scrupuleux du planning convenu</span>
+                  <span>Garantie décennale (à confirmer avec Jimmy avant d'afficher l'assureur)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0" />

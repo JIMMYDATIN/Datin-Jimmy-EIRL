@@ -14,7 +14,7 @@ export const Gallery: React.FC = () => {
     { id: 'menuiserie', label: 'Menuiserie' },
     { id: 'charpente', label: 'Charpente' },
     { id: 'isolation', label: 'Isolation' },
-    { id: 'hors-norme', label: 'Un projet hors norme' }
+    { id: 'hors-norme', label: 'Demandes spécifiques' }
   ];
 
   const filteredItems = selectedCategory === 'all'

@@ -70,10 +70,10 @@ export const Navbar: React.FC = () => {
             <a
               id="header-phone-top"
               href={COMPANY_INFO.phoneTel}
-              className="flex items-center gap-1.5 text-white font-bold bg-[#92400E] hover:bg-[#78350F] px-2.5 py-0.5 rounded-sm transition-colors"
+              className="flex items-center gap-1.5 text-[#E8DFD3] hover:text-[#FDE68A] text-xs font-semibold transition-colors"
             >
-              <Phone className="w-3 h-3 text-[#FDE68A]" />
-              <span>{COMPANY_INFO.phoneFormatted}</span>
+              <Phone className="w-3.5 h-3.5 text-[#FDE68A]" />
+              <span className="hover:underline underline-offset-2">{COMPANY_INFO.phoneFormatted}</span>
             </a>
           </div>
         </div>

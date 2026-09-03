@@ -25,63 +25,63 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'menuiserie',
     title: 'Menuiserie',
-    shortDesc: 'Fabrication sur mesure et pose : fenêtres, portes d\'entrée, meubles d\'ébénisterie, dressings sous combles, parquets et cuisines.',
-    fullDesc: 'Artisanat d\'art et précision millimétrique pour tous vos aménagements intérieurs et fermetures extérieures. De la création de meubles uniques et dressings à la pose de fenêtres bois/alu haute performance thermique.',
+    shortDesc: 'Fabrication sur mesure et pose soignée de fermetures et agencements intérieurs ou extérieurs.',
+    fullDesc: 'Artisanat et précision millimétrique pour tous vos aménagements intérieurs et fermetures extérieures : fenêtres, portes, dressings et mobilier artisanal.',
     iconName: 'Hammer',
     badge: 'Sur-Mesure & Rénovation',
     benefits: [
-      'Menuiseries extérieures : fenêtres double/triple vitrage, portes d\'entrée sécurisées et volets battants/roulants',
-      'Meubles personnalisés : bibliothèques sur mesure, buffets, tables en bois massif et cuisines artisanales',
-      'Aménagements pour enfants : lits superposés sécurisés avec barrières renforcées et rangements intégrés',
-      'Pose et rénovation de parquets massifs, contrecollés et stratifiés avec plinthes assorties'
+      'Fenêtres double/triple vitrage, volets & portes d\'entrée isolantes',
+      'Meubles d\'ébénisterie sur-mesure, bibliothèques & cuisines',
+      'Aménagements sécurisés pour enfants & mobilier sur-mesure',
+      'Pose et rénovation de parquets massifs et contrecollés'
     ],
-    materials: ['Chêne massif de pays', 'Frêne', 'Châtaignier', 'Aluminium thermo-laqué', 'PVC renforcé', 'Quincaillerie Blum'],
-    imageSrc: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1200&q=80'
+    materials: ['Chêne massif de pays', 'Frêne', 'Châtaignier', 'Aluminium thermo-laqué', 'PVC renforcé', 'Quincaillerie haute précision'],
+    imageSrc: '/PORTAIL1.webp'
   },
   {
     id: 'charpente',
     title: 'Charpente',
-    shortDesc: 'Conception, fabrication et pose de charpentes traditionnelles, rénovation de toitures, extensions en ossature bois et préaux.',
-    fullDesc: 'Maîtrise complète du taillage en atelier et du levage sur chantier. Nous concevons et rénovons des charpentes traditionnelles en bois massif robustes, conçues pour durer des générations dans le respect des styles normands.',
+    shortDesc: 'Conception, taillage traditionnel en atelier et levage de structures en bois massif.',
+    fullDesc: 'Maîtrise complète du taillage en atelier et du levage sur chantier pour concevoir des charpentes robustes et durables.',
     iconName: 'Trees',
-    badge: 'Artisan Charpentier',
+    badge: 'Bois Massif & Tradition',
     benefits: [
-      'Fabrication et assemblage de charpentes traditionnelles en bois massif (tenons, mortaises, chevilles bois)',
-      'Rénovation complète de structures de toiture, remplacement de pannes, arbalétriers et chevrons',
-      'Création d\'extensions ossature bois, surélévations de toiture et préaux d\'agrément',
-      'Levage et pose sécurisés sur chantier avec engins adaptés dans tout le Pays d\'Auge'
+      'Charpentes traditionnelles en bois massif (tenons, mortaises)',
+      'Rénovation de toitures, remplacement de pannes et chevrons',
+      'Extensions en ossature bois, surélévations & préaux',
+      'Taillage en atelier et levage sécurisé sur chantier'
     ],
     materials: ['Chêne de structure', 'Sapin du Nord', 'Bois Douglas', 'Épicéa certifié PEFC', 'Assemblages traditionnels'],
-    imageSrc: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80'
+    imageSrc: '/CHARPENTES1.webp'
   },
   {
     id: 'isolation',
     title: 'Isolation',
-    shortDesc: 'Isolation thermique et acoustique des combles, toitures et cloisons en partenariat avec ISOVER & certifié Qualibat RGE.',
-    fullDesc: 'En tant qu\'artisan certifié Qualibat RGE et partenaire de la marque ISOVER, nous réalisons des travaux d\'isolation performants ouvrant droit aux aides de l\'État (MaPrimeRénov\', primes CEE, TVA réduite à 5,5%).',
+    shortDesc: 'Amélioration des performances thermiques et acoustiques certifiée Qualibat RGE.',
+    fullDesc: 'Isolation haute performance pour réduire vos factures énergétiques et valoriser votre bien avec prise en charge des aides de l\'État.',
     iconName: 'ShieldCheck',
-    badge: 'Partenaire ISOVER & RGE',
+    badge: 'Certifié Qualibat RGE & ISOVER',
     benefits: [
-      'Isolation des combles perdus par soufflage mécanisé ou rouleaux laine minérale haute performance',
-      'Isolation sous rampants de toiture et aménagement thermique des combles',
-      'Doublage de murs intérieurs et cloisons à haute absorption acoustique',
-      'Dossier complet d\'aides de l\'État pris en charge (MaPrimeRénov\', Prime Énergie CEE)'
+      'Isolation des combles perdus & sous rampants de toiture',
+      'Doublage thermique des murs intérieurs & cloisons acoustiques',
+      'Matériaux haute performance en partenariat avec ISOVER',
+      'Éligibilité complète aux aides de l\'État (MaPrimeRénov\', CEE)'
     ],
-    materials: ['Laine de verre ISOVER haute performance', 'Laine de roche', 'Fibre de bois biosourcée', 'Membranes hygro-régulantes Vario'],
-    imageSrc: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80'
+    materials: ['Laine de verre ISOVER haute performance', 'Laine de roche', 'Fibre de bois biosourcée', 'Membranes hygro-régulantes'],
+    imageSrc: '/ISOLATION1.webp'
   },
   {
     id: 'hors-norme',
-    title: 'Un Projet Hors Norme',
-    shortDesc: 'Ouvrages d\'exception, architectures atypiques, structures suspendues, verrières d\'atelier et défis techniques sur-mesure.',
-    fullDesc: 'Vous avez une idée singulière ou un projet architectural complexe ? Jimmy Datin étudie la faisabilité technique, modélise votre projet et façonne des pièces d\'exception qui sortent des standards conventionnels.',
+    title: 'Une Demande Spécifique',
+    shortDesc: 'Créations sur-mesure, architectures atypiques et défis techniques adaptés à votre espace.',
+    fullDesc: 'Jimmy Datin étudie la faisabilité technique, modélise votre besoin et façonne des ouvrages personnalisés hors des standards industriels.',
     iconName: 'Sparkles',
-    badge: 'Création d\'Exception',
+    badge: 'Projets Personnalisés',
     benefits: [
-      'Conception et fabrication d\'ouvrages sur-mesure aux dimensions non standard',
-      'Mariage des matières : verrières atelier bois-métal, garde-corps sculptés, escaliers aériens',
-      'Terrasses suspendues, passerelles en bois et agencements extérieurs paysagers',
-      'Étude technique approfondie et conseils personnalisés pour chaque défi architectural'
+      'Étude technique et modélisation 3D pour projets hors gabarit',
+      'Mariage bois-métal, verrières d\'atelier & garde-corps sculptés',
+      'Terrasses suspendues, passerelles et escaliers sur-mesure',
+      'Adaptation millimétrée aux contraintes architecturales existantes'
     ],
     materials: ['Bois nobles séchés', 'Bois exotiques classe 4', 'Profils acier & verres feuilletés', 'Quincaillerie invisible'],
     imageSrc: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80'

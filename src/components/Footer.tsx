@@ -133,10 +133,19 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8C7E70]">
           <div>
-            © {new Date().getFullYear()} EIRL Datin Jimmy — Tous droits réservés. Menuiserie artisanale à Dozulé (14430).
+            © {new Date().getFullYear()} EIRL Datin Jimmy — Tous droits réservés. Menuiserie & Charpente à Dozulé.
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a
+              href="https://hugofournier.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#B8AEA3] hover:text-[#FAF7F2] bg-[#221B15] px-2.5 py-1 rounded-md border border-[#3A2E23] transition-colors"
+            >
+              Site créé par <span className="font-semibold text-white">Hugo Fournier EI</span>
+            </a>
+            <span>•</span>
             <button
               onClick={onOpenLegal}
               className="hover:text-[#FAF7F2] underline cursor-pointer"
