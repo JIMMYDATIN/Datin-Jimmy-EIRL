@@ -7,18 +7,18 @@ export const COMPANY_INFO = {
   owner: "Jimmy Datin",
   location: "Dozulé, Calvados (14430)",
   fullAddress: "14430 Dozulé — Normandie",
-  phone: "06 45 28 91 33",
-  phoneFormatted: "06 45 28 91 33",
-  phoneTel: "tel:0645289133",
+  phone: "07 43 64 14 13",
+  phoneFormatted: "07 43 64 14 13",
+  phoneTel: "tel:0743641413",
   email: "contact@menuiserie-datin-dozule.fr",
   workingHours: "Du Lundi au Vendredi : 08h00 - 19h00 | Samedi : sur RDV",
-  facebookUrl: "https://www.facebook.com/search/top?q=EIRL%20Datin%20Jimmy",
+  facebookUrl: "https://www.facebook.com/menuiserieDATIN",
   rgeNumber: "QUALIBAT RGE n° E-E169284",
   isoverPartner: true,
-  experience: "Savoir-faire familial de père en fils",
-  zoneRadius: "Rayon d'environ 35 km autour de Dozulé (Pays d'Auge & Côte Fleurie)",
+  experience: "Savoir-faire familial",
+  zoneRadius: "Rayon d'environ 40 km autour de Dozulé (Pays d'Auge & Côte Fleurie)",
   siret: "849 712 943 00018",
-  decennale: "Assurance Décennale & Responsabilité Civile Professionnelle AXA France"
+  decennale: "Assurance Décennale & Responsabilité Civile Professionnelle Groupama"
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -31,8 +31,8 @@ export const SERVICES: ServiceItem[] = [
     badge: 'Sur-Mesure & Rénovation',
     benefits: [
       'Fenêtres double/triple vitrage, volets & portes d\'entrée isolantes',
-      'Dressings & bibliothèques sur mesure',
-      'Aménagements sécurisés pour enfants & mobilier sur-mesure',
+      'Mobilier, dressings & bibliothèques sur mesure',
+      'Portails et portes de garage',
       'Pose et rénovation de parquets massifs et contrecollés'
     ],
     materials: ['Chêne massif de pays', 'Frêne', 'Châtaignier', 'Aluminium thermo-laqué', 'PVC renforcé', 'Quincaillerie haute précision'],
@@ -47,7 +47,7 @@ export const SERVICES: ServiceItem[] = [
     badge: 'Bois Massif & Tradition',
     benefits: [
       'Charpentes traditionnelles en bois massif (tenons, mortaises)',
-      'Rénovation de toitures, remplacement de pannes et chevrons',
+      'Création et rénovation de colombages traditionnels et appliques',
       'Extensions en ossature bois, surélévations & préaux',
       'Taillage en atelier et levage sécurisé sur chantier'
     ],
@@ -57,7 +57,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'isolation',
     title: 'Isolation',
-    shortDesc: 'Amélioration des performances thermiques et acoustiques certifiée Qualibat RGE.',
+    shortDesc: 'Aménagement de combles habitables, amélioration des performances thermiques et acoustiques',
     fullDesc: 'Isolation haute performance pour réduire vos factures énergétiques et valoriser votre bien avec prise en charge des aides de l\'État.',
     iconName: 'ShieldCheck',
     badge: 'Certifié Qualibat RGE & ISOVER',
@@ -103,7 +103,7 @@ export const ADVANTAGES: AdvantageItem[] = [
   },
   {
     tag: 'Tradition & Transmission',
-    title: 'Savoir-Faire Familial de Père en Fils',
+    title: 'Savoir-Faire Familial',
     description: 'Nourri par des décennies d\'expérience du travail du bois, Jimmy Datin perpétue les gestes d\'une menuiserie et charpente exigeante où chaque assemblage est exécuté avec fierté et précision.',
     icon: 'Trees'
   },

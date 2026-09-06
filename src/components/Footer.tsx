@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               </div>
 
               <p className="text-xs sm:text-sm text-[#C4B5A5] leading-relaxed mb-6 max-w-md">
-                Entreprise artisanale de menuiserie à <strong>Dozulé (14430)</strong>, transmise de père en fils. 
+                Entreprise artisanale et familiale de menuiserie à <strong>Dozulé (14430)</strong>. 
                 Spécialiste de la fabrication sur-mesure, fenêtres, parquets et de l'isolation thermique certifiée Qualibat RGE.
               </p>
 
@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             </div>
 
             <div className="mt-6 pt-4 text-xs text-[#8C7E70]">
-              <span>Garantie décennale AXA France • SIRET : {COMPANY_INFO.siret}</span>
+              <span>Garantie décennale Groupama • SIRET : {COMPANY_INFO.siret}</span>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 <a href="#pourquoi-nous" className="hover:text-white transition-colors">Pourquoi Nous Choisir (RGE)</a>
               </li>
               <li>
-                <a href="#realisations" className="hover:text-white transition-colors">Nos Réalisations</a>
+                <a href={COMPANY_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Nos Réalisations (Facebook)</a>
               </li>
               <li>
                 <a href="#avis" className="hover:text-white transition-colors">Avis Clients</a>
@@ -84,9 +84,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               </li>
               <li>
                 <a href="#devis" className="hover:text-white transition-colors">Demander un Devis Gratuit</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-white transition-colors">Contact</a>
               </li>
             </ul>
           </div>
@@ -123,7 +120,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#0D65D9] text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors"
               >
                 <Facebook className="w-4 h-4" />
-                <span>Page Facebook EIRL Datin Jimmy</span>
+                <span>Page Facebook Menuiserie Datin</span>
               </a>
             </div>
           </div>

@@ -3,11 +3,9 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { Gallery } from './components/Gallery';
 import { Reviews } from './components/Reviews';
 import { InterventionZone } from './components/InterventionZone';
 import { QuoteForm } from './components/QuoteForm';
-import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { LegalModal } from './components/LegalModal';
 import { Phone, FileText } from 'lucide-react';
@@ -32,10 +30,7 @@ export default function App() {
         {/* 3. Pourquoi Nous Choisir (Qualibat RGE & ISOVER) */}
         <WhyChooseUs />
 
-        {/* 4. Nos Réalisations (Galerie photos) */}
-        <Gallery />
-
-        {/* 5. Avis Clients (Témoignages) */}
+        {/* 4. Avis Clients (Témoignages) */}
         <Reviews />
 
         {/* 6. Zone d'intervention (Carte Google Maps & Communes) */}
@@ -43,9 +38,6 @@ export default function App() {
 
         {/* 7. Demander un devis (Formulaire interactif) */}
         <QuoteForm />
-
-        {/* 8. Contact & Atelier */}
-        <ContactSection />
       </main>
 
       {/* Footer */}

@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
 
-      const sections = ['accueil', 'savoir-faire', 'pourquoi-nous', 'realisations', 'avis', 'zone', 'devis', 'contact'];
+      const sections = ['accueil', 'savoir-faire', 'pourquoi-nous', 'avis', 'zone', 'devis'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -35,10 +35,9 @@ export const Navbar: React.FC = () => {
     { href: '#accueil', label: 'Accueil', id: 'accueil' },
     { href: '#savoir-faire', label: 'Savoir-Faire', id: 'savoir-faire' },
     { href: '#pourquoi-nous', label: 'Pourquoi Nous', id: 'pourquoi-nous' },
-    { href: '#realisations', label: 'Réalisations', id: 'realisations' },
     { href: '#avis', label: 'Avis Clients', id: 'avis' },
     { href: '#zone', label: 'Zone d\'intervention', id: 'zone' },
-    { href: '#contact', label: 'Contact', id: 'contact' },
+    { href: '#devis', label: 'Devis', id: 'devis' },
   ];
 
   return (
@@ -65,7 +64,7 @@ export const Navbar: React.FC = () => {
 
           <div className="flex items-center gap-4 ml-auto">
             <span className="hidden sm:inline text-[#D1D5DB] text-xs">
-              Artisan de père en fils
+              Savoir-faire familial
             </span>
             <a
               id="header-phone-top"
@@ -100,10 +99,10 @@ export const Navbar: React.FC = () => {
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display font-bold text-base sm:text-lg tracking-tight text-[#1F1C18]">
-                  EIRL Datin Jimmy
+                  Menuiserie Datin
                 </span>
                 <span className="hidden lg:inline-block text-[10px] uppercase font-bold tracking-wider bg-[#F5EFE6] text-[#92400E] px-2 py-0.5 rounded-sm border border-[#E5DACB]">
-                  Menuiserie
+                  Artisanat
                 </span>
               </div>
               <p className="text-[11px] text-[#6B5E51] font-medium">

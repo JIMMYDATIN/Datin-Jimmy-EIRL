@@ -144,7 +144,7 @@ export const WhyChooseUs: React.FC = () => {
                   <MapPin className="w-7 h-7" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-[#1F1C18]">
-                  Plus de 10 Ans d'Expérience dans le Pays d'Auge
+                  Plus de 15 ans d'expérience dans le Pays d'Auge
                 </h3>
               </div>
 
@@ -161,11 +161,15 @@ export const WhyChooseUs: React.FC = () => {
                   <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0" />
                   <span>Sélection rigoureuse des essences de bois (chêne de pays, résineux certifiés)</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0" />
+                  <span>Artisan local, travaille dans un rayon de 40km autour de Dozulé</span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Pillar 4: Rigueur & finitions soignées */}
+          {/* Pillar 4: Rigueur et proximité */}
           <div className="bg-[#FAF7F2] p-8 rounded-2xl border border-[#E2D6C5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#78350F] bg-[#EAE1D5] px-3 py-1 rounded-full mb-4 inline-block">
@@ -177,7 +181,7 @@ export const WhyChooseUs: React.FC = () => {
                   <HeartHandshake className="w-7 h-7" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-[#1F1C18]">
-                  Rigueur & finitions soignées
+                  Rigueur et proximité
                 </h3>
               </div>
 
@@ -192,11 +196,11 @@ export const WhyChooseUs: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0" />
-                  <span>Garantie décennale (à confirmer avec Jimmy avant d'afficher l'assureur)</span>
+                  <span>Garantie décennale Groupama & responsabilité civile</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0" />
-                  <span>Chantiers protégés et nettoyés quotidiennement</span>
+                  <span>Bureau ouvert pour vous accueillir à Dozulé</span>
                 </div>
               </div>
             </div>

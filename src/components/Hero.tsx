@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Award, CheckCircle2, MapPin } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Award, CheckCircle2, MapPin, Facebook } from 'lucide-react';
 import { SmartImage } from './SmartImage';
 
 export const Hero: React.FC = () => {
@@ -81,11 +81,13 @@ export const Hero: React.FC = () => {
 
               <a
                 id="hero-realisations-cta"
-                href="#realisations"
-                className="inline-flex items-center gap-1.5 text-[#5C4F42] hover:text-[#92400E] text-base font-medium transition-colors py-2 group"
+                href="https://www.facebook.com/menuiserieDATIN"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#1877F2] hover:bg-[#0D65D9] text-white text-base font-semibold px-6 py-3.5 rounded-xl shadow-md transition-all hover:shadow-lg active:scale-98"
               >
-                <span className="underline-offset-4 group-hover:underline">Voir nos réalisations</span>
-                <ArrowRight className="w-4 h-4 text-[#92400E] group-hover:translate-x-1 transition-transform" />
+                <Facebook className="w-5 h-5 fill-current" />
+                <span>Voir nos réalisations</span>
               </a>
             </div>
 
