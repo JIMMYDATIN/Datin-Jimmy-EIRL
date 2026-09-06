@@ -31,7 +31,7 @@ export const SERVICES: ServiceItem[] = [
     badge: 'Sur-Mesure & Rénovation',
     benefits: [
       'Fenêtres double/triple vitrage, volets & portes d\'entrée isolantes',
-      'Meubles d\'ébénisterie sur-mesure, bibliothèques & cuisines',
+      'Dressings & bibliothèques sur mesure',
       'Aménagements sécurisés pour enfants & mobilier sur-mesure',
       'Pose et rénovation de parquets massifs et contrecollés'
     ],
