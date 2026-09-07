@@ -58,9 +58,13 @@ export const Reviews: React.FC = () => {
               <div>
                 {/* Header of review: Stars & Quote icon */}
                 <div className="flex items-center justify-between mb-3">
-                  <div className="flex text-[#F59E0B]" aria-label={`${review.rating} étoiles sur 5`}>
+                  <div
+                    role="img"
+                    aria-label={`Note de ${review.rating} sur 5 étoiles`}
+                    className="flex text-[#F59E0B]"
+                  >
                     {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#F59E0B]" />
+                      <Star key={i} className="w-4 h-4 fill-[#F59E0B]" aria-hidden="true" />
                     ))}
                   </div>
                   <Quote className="w-6 h-6 text-[#E5DACB]" />
@@ -96,17 +100,21 @@ export const Reviews: React.FC = () => {
         </div>
 
         {/* Mobile pagination dots (only visible on mobile < md) */}
-        <div className="flex md:hidden items-center justify-center gap-2 mt-4">
+        <div className="flex md:hidden items-center justify-center gap-1 mt-4">
           {REVIEWS.map((_, index) => (
             <button
               key={index}
               type="button"
               onClick={() => scrollToIndex(index)}
               aria-label={`Aller au témoignage ${index + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                activeIndex === index ? 'w-6 bg-[#92400E]' : 'w-2 bg-[#D1C7BA]'
-              }`}
-            />
+              className="p-2.5 inline-flex items-center justify-center focus:outline-hidden min-w-[36px] min-h-[36px]"
+            >
+              <span
+                className={`h-2 rounded-full transition-all duration-300 block ${
+                  activeIndex === index ? 'w-6 bg-[#92400E]' : 'w-2 bg-[#D1C7BA]'
+                }`}
+              />
+            </button>
           ))}
         </div>
 

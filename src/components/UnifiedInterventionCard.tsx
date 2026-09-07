@@ -101,7 +101,7 @@ export const UnifiedInterventionCard: React.FC = () => {
           {/* Autocomplete dropdown suggestions */}
           {query.trim().length > 1 && !selectedCommune && suggestions.length > 0 && (
             <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-[#E0D3C0] rounded-xl shadow-xl z-30 overflow-hidden max-h-52 overflow-y-auto">
-              <div className="px-3 py-1.5 text-[10px] uppercase font-semibold text-[#8C7E70] bg-[#F5EFE6] border-b border-[#E8DFD3]">
+              <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-[#4A3E31] bg-[#F5EFE6] border-b border-[#E8DFD3]">
                 Communes suggérées :
               </div>
               {suggestions.map((item) => (
@@ -248,7 +248,7 @@ export const UnifiedInterventionCard: React.FC = () => {
                     <MapPin className={`w-3.5 h-3.5 ${isSelected ? 'text-[#92400E]' : 'text-[#A3978A]'}`} />
                     {city.name}
                   </span>
-                  <span className="text-[10px] text-[#786C5E] bg-[#F5EFE6] px-2 py-0.5 rounded-md font-medium">
+                  <span className={`text-[10px] px-2 py-0.5 rounded-md font-semibold ${isSelected ? 'text-[#78350F] bg-[#FDE68A]' : 'text-[#3E342B] bg-[#EFE7DC]'}`}>
                     {city.postal}
                   </span>
                 </div>

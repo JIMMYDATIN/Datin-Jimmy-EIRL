@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                   <span className="font-display font-bold text-lg text-white block">
                     {COMPANY_INFO.name}
                   </span>
-                  <span className="text-xs text-[#9CA3AF]">
+                  <span className="text-xs text-[#D1D5DB]">
                     Menuiserie & Agencement Sur-Mesure
                   </span>
                 </div>
@@ -53,16 +53,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 text-xs text-[#8C7E70]">
+            <div className="mt-6 pt-4 text-xs text-[#C4B5A5]">
               <span>Garantie décennale Groupama • SIRET : {COMPANY_INFO.siret}</span>
             </div>
           </div>
 
           {/* Navigation Links */}
           <div className="lg:col-span-3">
-            <h4 className="font-display text-sm font-bold text-white uppercase tracking-wider mb-4 text-[#FDE68A]">
+            <h3 className="font-display text-sm font-bold uppercase tracking-wider mb-4 text-[#FDE68A]">
               Navigation
-            </h4>
+            </h3>
             <ul className="space-y-2.5 text-xs text-[#C4B5A5]">
               <li>
                 <a href="#accueil" className="hover:text-white transition-colors">Accueil</a>
@@ -90,9 +90,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
 
           {/* Contact Details */}
           <div className="lg:col-span-4">
-            <h4 className="font-display text-sm font-bold text-white uppercase tracking-wider mb-4 text-[#FDE68A]">
+            <h3 className="font-display text-sm font-bold uppercase tracking-wider mb-4 text-[#FDE68A]">
               Coordonnées de l'Atelier
-            </h4>
+            </h3>
             <ul className="space-y-3 text-xs text-[#C4B5A5]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#EA580C] shrink-0 mt-0.5" />
@@ -117,7 +117,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 href={COMPANY_INFO.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#0D65D9] text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 bg-[#0D65D9] hover:bg-[#0A4BB3] text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors"
               >
                 <Facebook className="w-4 h-4" />
                 <span>Page Facebook Menuiserie Datin</span>
@@ -128,7 +128,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8C7E70]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#C4B5A5]">
           <div>
             © {new Date().getFullYear()} Menuiserie Datin J. — Tous droits réservés. Menuiserie & Charpente à Dozulé.
           </div>
@@ -138,7 +138,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               href="https://hugofournier.fr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#B8AEA3] hover:text-[#FAF7F2] bg-[#221B15] px-2.5 py-1 rounded-md border border-[#3A2E23] transition-colors"
+              className="text-[#E5DACB] hover:text-white bg-[#221B15] px-2.5 py-1 rounded-md border border-[#3A2E23] transition-colors"
             >
               Site créé par <span className="font-semibold text-white">Hugo Fournier EI</span>
             </a>

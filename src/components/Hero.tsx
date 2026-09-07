@@ -84,13 +84,12 @@ export const Hero: React.FC = () => {
                 href="https://www.facebook.com/menuiserieDATIN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 bg-[#1877F2] hover:bg-[#0D65D9] text-white text-base font-semibold px-6 py-3.5 rounded-xl shadow-md transition-all hover:shadow-lg active:scale-98"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#0D65D9] hover:bg-[#0A4BB3] text-white text-base font-semibold px-6 py-3.5 rounded-xl shadow-md transition-all hover:shadow-lg active:scale-98"
               >
                 <Facebook className="w-5 h-5 fill-current" />
                 <span>Voir nos réalisations</span>
               </a>
             </div>
-
           </div>
 
           {/* Right Column: Visual Composition */}
@@ -102,10 +101,12 @@ export const Hero: React.FC = () => {
                 <SmartImage
                   src="/maison1.webp"
                   fallbackSrc="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Charpente et menuiserie artisanale - EIRL Datin Jimmy à Dozulé"
+                  alt="Charpente et menuiserie artisanale - Menuiserie Datin J. à Dozulé"
                   className="w-full h-full object-cover"
                   containerClassName="h-full w-full"
                   badge="Colombages en chêne"
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 
                 {/* Overlay with subtle warm gradient */}

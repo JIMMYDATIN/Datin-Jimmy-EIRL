@@ -35,10 +35,11 @@ export const SmartImage: React.FC<SmartImageProps> = ({
     <div className={`relative overflow-hidden w-full h-full min-h-[160px] bg-[#2E261E] ${containerClassName}`}>
       <img
         src={currentSrc}
-        alt={alt || 'Menuiserie et charpente EIRL Datin Jimmy'}
+        alt={alt || 'Menuiserie et charpente Menuiserie Datin J.'}
         onError={handleError}
         onLoad={() => setLoaded(true)}
         referrerPolicy="no-referrer"
+        decoding="async"
         className={`w-full h-full object-cover transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-90'} ${className}`}
         loading="lazy"
         {...props}
