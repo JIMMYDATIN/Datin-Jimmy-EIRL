@@ -113,7 +113,7 @@ export const QuoteForm: React.FC = () => {
   };
 
   return (
-    <section id="devis" className="py-20 bg-[#FAF7F2] border-b border-[#E5DACB] relative">
+    <section id="devis" className="py-20 bg-[#F5EFE6] border-b border-[#E5DACB] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

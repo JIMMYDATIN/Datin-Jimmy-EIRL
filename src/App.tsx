@@ -56,17 +56,17 @@ export default function App() {
           <WhyChooseUs />
         </Suspense>
 
-        {/* 4. Avis Clients (Témoignages) */}
-        <Suspense fallback={<div className="min-h-[250px] bg-[#F5EFE6]" />}>
-          <Reviews />
-        </Suspense>
-
-        {/* 6. Zone d'intervention (Carte Google Maps & Communes) */}
-        <Suspense fallback={<div className="min-h-[350px] bg-[#FAF7F2]" />}>
+        {/* 4. Zone d'intervention (Carte Google Maps & Communes) */}
+        <Suspense fallback={<div className="min-h-[350px] bg-[#F5EFE6]" />}>
           <InterventionZone />
         </Suspense>
 
-        {/* 7. Demander un devis (Formulaire interactif) */}
+        {/* 5. Avis Clients (Témoignages) */}
+        <Suspense fallback={<div className="min-h-[250px] bg-[#FAF7F2]" />}>
+          <Reviews />
+        </Suspense>
+
+        {/* 6. Demander un devis (Formulaire interactif) */}
         <Suspense fallback={<div className="min-h-[350px] bg-[#F5EFE6]" />}>
           <QuoteForm />
         </Suspense>

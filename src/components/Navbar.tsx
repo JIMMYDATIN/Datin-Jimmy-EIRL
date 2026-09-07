@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
 
-      const sections = ['accueil', 'savoir-faire', 'pourquoi-nous', 'avis', 'zone', 'devis'];
+      const sections = ['accueil', 'savoir-faire', 'pourquoi-nous', 'zone', 'avis', 'devis'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -35,8 +35,8 @@ export const Navbar: React.FC = () => {
     { href: '#accueil', label: 'Accueil', id: 'accueil' },
     { href: '#savoir-faire', label: 'Savoir-Faire', id: 'savoir-faire' },
     { href: '#pourquoi-nous', label: 'Pourquoi Nous', id: 'pourquoi-nous' },
-    { href: '#avis', label: 'Avis Clients', id: 'avis' },
     { href: '#zone', label: 'Zone d\'intervention', id: 'zone' },
+    { href: '#avis', label: 'Avis Clients', id: 'avis' },
     { href: '#devis', label: 'Devis', id: 'devis' },
   ];
 

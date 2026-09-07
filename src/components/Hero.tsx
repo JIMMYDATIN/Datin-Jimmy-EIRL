@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Award, CheckCircle2, MapPin, Facebook } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Award, CheckCircle2, Facebook } from 'lucide-react';
 import { SmartImage } from './SmartImage';
 
 export const Hero: React.FC = () => {
@@ -27,10 +27,6 @@ export const Hero: React.FC = () => {
               <span className="inline-flex items-center gap-1.5 bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3 py-1.5 rounded-full border border-[#FDE68A]">
                 <ShieldCheck className="w-4 h-4 text-[#D97706]" />
                 Partenaire ISOVER
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-[#EAE1D5] text-[#5C5042] text-xs font-medium px-3 py-1.5 rounded-full">
-                <MapPin className="w-3.5 h-3.5 text-[#EA580C]" />
-                Dozulé (14430)
               </span>
             </div>
 
