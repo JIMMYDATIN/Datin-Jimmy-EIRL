@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ShieldCheck, HeartHandshake, CheckCircle2, FileText, Sparkles, MapPin } from 'lucide-react';
+import { Award, ShieldCheck, HeartHandshake, CheckCircle2, FileText, Sparkles, MapPin, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/menuiserieData';
 
 export const WhyChooseUs: React.FC = () => {
@@ -225,10 +225,12 @@ export const WhyChooseUs: React.FC = () => {
           </div>
 
           <a
+            id="why-us-rge-cta"
             href="#devis"
-            className="whitespace-nowrap bg-[#FAF7F2] hover:bg-white text-[#261E17] font-bold text-sm px-5 py-3 rounded-xl shadow-xs transition-colors shrink-0"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-[#92400E] hover:bg-[#B45309] text-white font-bold text-sm px-6 py-3 rounded-xl shadow-md transition-all shrink-0 text-center"
           >
-            Faire le point gratuitement
+            <span>Faire le point gratuitement</span>
+            <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 

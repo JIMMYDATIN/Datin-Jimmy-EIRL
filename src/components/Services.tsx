@@ -19,7 +19,6 @@ const fallbackImages: Record<string, string> = {
 
 export const Services: React.FC = () => {
   const mainServices = SERVICES.filter(s => s.id !== 'hors-norme');
-  const customService = SERVICES.find(s => s.id === 'hors-norme');
 
   return (
     <section id="savoir-faire" className="py-20 bg-[#F5EFE6] border-b border-[#E5DACB]">
@@ -35,7 +34,7 @@ export const Services: React.FC = () => {
             Notre Savoir-Faire
           </h2>
           <p className="text-base sm:text-lg text-[#615344] leading-relaxed">
-            Trois activités complémentaires au cœur de notre métier dans le Calvados, complétées par la conception et la réalisation de vos demandes spécifiques sur-mesure.
+            Trois activités complémentaires au cœur de notre métier dans le Calvados : menuiserie, charpente et isolation.
           </p>
         </div>
 
@@ -97,55 +96,6 @@ export const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Differentiated Block: Une Demande Spécifique */}
-        {customService && (
-          <div
-            id="service-demande-specifique"
-            className="mt-8 bg-[#FAF7F2] rounded-2xl border border-[#D9CBB9] p-6 sm:p-8 shadow-xs relative overflow-hidden"
-          >
-            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-              
-              {/* Left Column: Heading & Description */}
-              <div className="max-w-xl">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#92400E] bg-[#FEF3C7] border border-[#FDE68A] px-2.5 py-0.5 rounded-full">
-                    {customService.badge || 'Sur-Mesure'}
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#F5EFE6] border border-[#E0D3C0] flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5 text-[#92400E]" />
-                  </div>
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-[#1F1C18]">
-                    {customService.title}
-                  </h3>
-                </div>
-
-                <p className="text-sm text-[#5C4F42] leading-relaxed">
-                  Un agencement atypique, des contraintes d'espace particulières, un mariage de matières ou un meuble aux dimensions non standard ? Jimmy Datin étudie la faisabilité technique et conçoit vos créations personnalisées.
-                </p>
-              </div>
-
-              {/* Right Column: 4 Key Points at a Glance */}
-              <div className="w-full lg:w-auto lg:min-w-[420px] bg-[#F5EFE6] p-5 rounded-xl border border-[#E0D3C0]">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#786C5E] block mb-3">
-                  Exemples de réalisations sur-mesure :
-                </span>
-                <ul className="space-y-2.5">
-                  {customService.benefits.slice(0, 4).map((benefit, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3E342B] leading-snug">
-                      <CheckCircle2 className="w-4 h-4 text-[#92400E] shrink-0 mt-0.5" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        )}
-
         {/* Bottom Banner with single primary CTA */}
         <div className="mt-12 bg-[#261E17] text-[#FAF7F2] rounded-2xl p-6 sm:p-8 border border-[#433528] shadow-md flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
           <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-[#92400E]/20 rounded-full blur-2xl pointer-events-none" />
@@ -155,10 +105,10 @@ export const Services: React.FC = () => {
               Accompagnement de A à Z
             </span>
             <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-2">
-              Un projet de menuiserie, charpente ou isolation dans le Calvados ?
+              De l'idée aux clés : votre projet piloté de A à Z
             </h3>
             <p className="text-xs sm:text-sm text-[#D1D5DB] leading-relaxed">
-              Jimmy Datin se déplace sur votre chantier à Dozulé, Cabourg, Lisieux, Deauville et dans tout le Pays d'Auge pour une prise de cotes gratuite et des conseils sur-mesure.
+              Nous coordonnons l'intégralité de votre projet dans le Calvados : étude et plans, démarches administratives (déclaration préalable, dépôt en préfecture), réalisation des travaux et validation finale. Un seul interlocuteur, du premier croquis à la remise des clés.
             </p>
           </div>
 
@@ -168,7 +118,7 @@ export const Services: React.FC = () => {
               href="#devis"
               className="inline-flex items-center justify-center gap-2 bg-[#92400E] hover:bg-[#B45309] text-white text-sm font-bold py-3 px-6 rounded-xl shadow-md transition-all text-center"
             >
-              <span>Demander un devis gratuit</span>
+              <span>Discuter de mon projet clés en main</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

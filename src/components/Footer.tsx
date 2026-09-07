@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <ul className="space-y-3 text-xs text-[#C4B5A5]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#EA580C] shrink-0 mt-0.5" />
-                <span>EIRL Datin Jimmy, 14430 Dozulé, Calvados (Normandie)</span>
+                <span>Menuiserie Datin J., 14430 Dozulé, Calvados (Normandie)</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#92400E] shrink-0" />
@@ -130,7 +130,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8C7E70]">
           <div>
-            © {new Date().getFullYear()} EIRL Datin Jimmy — Tous droits réservés. Menuiserie & Charpente à Dozulé.
+            © {new Date().getFullYear()} Menuiserie Datin J. — Tous droits réservés. Menuiserie & Charpente à Dozulé.
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">

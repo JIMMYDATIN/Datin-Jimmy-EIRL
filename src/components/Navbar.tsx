@@ -99,7 +99,7 @@ export const Navbar: React.FC = () => {
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-display font-bold text-base sm:text-lg tracking-tight text-[#1F1C18]">
-                  Menuiserie Datin
+                  Menuiserie Datin J.
                 </span>
                 <span className="hidden lg:inline-block text-[10px] uppercase font-bold tracking-wider bg-[#F5EFE6] text-[#92400E] px-2 py-0.5 rounded-sm border border-[#E5DACB]">
                   Artisanat

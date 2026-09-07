@@ -32,7 +32,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
               Mentions Légales & Réglementation
             </h3>
             <p className="text-xs text-[#786C5E]">
-              EIRL Datin Jimmy — Entreprise Individuelle de Menuiserie
+              Menuiserie Datin J. (EIRL Datin Jimmy) — Entreprise Individuelle de Menuiserie
             </p>
           </div>
         </div>
@@ -46,7 +46,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
               1. Identification de l'entreprise
             </h4>
             <ul className="space-y-1 pl-4 list-disc">
-              <li><strong>Raison sociale :</strong> {COMPANY_INFO.name} (Entrepreneur Individuel à Responsabilité Limitée)</li>
+              <li><strong>Nom commercial :</strong> {COMPANY_INFO.name}</li>
+              <li><strong>Raison sociale :</strong> {COMPANY_INFO.legalName} (Entrepreneur Individuel à Responsabilité Limitée)</li>
               <li><strong>Dirigeant :</strong> {COMPANY_INFO.owner}</li>
               <li><strong>Siège social :</strong> {COMPANY_INFO.fullAddress}</li>
               <li><strong>SIRET :</strong> {COMPANY_INFO.siret}</li>

@@ -1,7 +1,8 @@
 import { ServiceItem, RealisationItem, ReviewItem, AdvantageItem } from '../types';
 
 export const COMPANY_INFO = {
-  name: "EIRL Datin Jimmy",
+  name: "Menuiserie Datin J.",
+  legalName: "EIRL Datin Jimmy",
   trade: "Menuiserie & Agencement",
   tagline: "Menuiserie sur mesure, artisanat familial à Dozulé",
   owner: "Jimmy Datin",
@@ -10,7 +11,7 @@ export const COMPANY_INFO = {
   phone: "07 43 64 14 13",
   phoneFormatted: "07 43 64 14 13",
   phoneTel: "tel:0743641413",
-  email: "contact@menuiserie-datin-dozule.fr",
+  email: "eirldatinj@gmail.com",
   workingHours: "Du Lundi au Vendredi : 08h00 - 19h00 | Samedi : sur RDV",
   facebookUrl: "https://www.facebook.com/menuiserieDATIN",
   rgeNumber: "QUALIBAT RGE n° E-E169284",
@@ -217,36 +218,36 @@ export const REALISATIONS: RealisationItem[] = [
 export const REVIEWS: ReviewItem[] = [
   {
     id: 'rev-1',
-    author: 'Michel & Valérie B.',
-    location: 'Dozulé (14430)',
+    author: 'Christophe Deleque',
+    location: 'Houlgate',
     rating: 5,
-    date: 'Janvier 2026',
-    projectType: 'Lits superposés sur-mesure & Dressing',
-    content: 'Jimmy a réalisé pour nos deux garçons un lit superposé sur mesure d\'une qualité exceptionnelle. Les finitions sont impeccables, la structure est d\'une robustesse rassurante et la sécurité a été pensée dans les moindres détails. Un artisan passionné, ponctuel et d\'une grande gentillesse. Nous recommandons les yeux fermés !',
+    date: 'Avis vérifié',
+    projectType: 'Isolation & création de cloisons, pose de parquet et placards',
+    content: "Pour création et isolation de cloisons ainsi que pose parquet et création de placards, Jimmy Datin et son équipe sont d'un très grand professionnalisme, respect des délais et qualité du travail, je recommande vivement.",
     verified: true,
-    highlight: 'Structure ultra robuste & finitions irréprochables'
+    highlight: "Très grand professionnalisme & respect des délais"
   },
   {
     id: 'rev-2',
-    author: 'Émilie G.',
-    location: 'Cabourg (14390)',
+    author: 'fr Ba',
+    location: 'Dozulé',
     rating: 5,
-    date: 'Novembre 2025',
-    projectType: 'Changement de fenêtres bois (RGE)',
-    content: 'Remplacement de toutes les fenêtres de notre maison normande. Jimmy Datin a su respecter le style de notre façade tout en nous apportant une isolation thermique remarquable. Le label RGE nous a permis d\'obtenir les aides sans souci. Chantier laissé parfaitement propre tous les soirs.',
+    date: 'Avis vérifié',
+    projectType: 'Charpente',
+    content: "Une entreprise très professionnelle avec de bons conseils, qui respecte les délais malgré les aléas climatiques. Nous sommes très satisfaits du travail effectué, sur la charpente. Nous recommandons vivement.",
     verified: true,
-    highlight: 'Isolation remarquable & aides RGE obtenues'
+    highlight: "Bons conseils & respect des délais"
   },
   {
     id: 'rev-3',
-    author: 'Jean-Pierre L.',
-    location: 'Houlgate (14510)',
+    author: 'Marine Cuvelier',
+    location: 'Cabourg',
     rating: 5,
-    date: 'Septembre 2025',
-    projectType: 'Pose de parquet en chêne massif & Isolation ISOVER',
-    content: 'Artisan sérieux, à l\'écoute et de bon conseil. Jimmy est intervenu pour l\'isolation de nos combles (partenaire ISOVER) et la pose d\'un parquet en chêne massif dans le salon. Le résultat dépasse nos attentes. Respect scrupuleux des délais et des devis.',
+    date: 'Avis vérifié',
+    projectType: 'Colombage bois sur façade',
+    content: "Pose d'un colombage bois sur notre façade. Nous sommes ravis. Le bois est de très bonne qualité, le rendu est soigné. Merci pour ce bel ouvrage.",
     verified: true,
-    highlight: 'Respect rigoureux des délais & du devis'
+    highlight: "Bois de très bonne qualité & rendu soigné"
   }
 ];
 

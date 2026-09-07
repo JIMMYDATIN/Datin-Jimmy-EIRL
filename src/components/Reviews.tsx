@@ -1,90 +1,92 @@
-import React from 'react';
-import { Star, Quote, CheckCircle2, MessageSquareText, ThumbsUp } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Star, Quote, CheckCircle2, ThumbsUp } from 'lucide-react';
 import { REVIEWS } from '../data/menuiserieData';
 
 export const Reviews: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const scrollLeft = container.scrollLeft;
+    const itemWidth = container.offsetWidth * 0.85;
+    const index = Math.round(scrollLeft / (itemWidth || 1));
+    setActiveIndex(Math.min(Math.max(index, 0), REVIEWS.length - 1));
+  };
+
+  const scrollToIndex = (index: number) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const card = container.children[index] as HTMLElement;
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      setActiveIndex(index);
+    }
+  };
+
   return (
-    <section id="avis" className="py-20 bg-[#FAF7F2] border-b border-[#E5DACB] relative">
+    <section id="avis" className="py-12 sm:py-16 bg-[#FAF7F2] border-b border-[#E5DACB] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3.5 py-1.5 rounded-full border border-[#FDE68A] shadow-2xs mb-3">
+        {/* Section Header - Compact without separate rating card */}
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-1.5 bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3.5 py-1.5 rounded-full border border-[#FDE68A] shadow-2xs mb-2.5">
             <ThumbsUp className="w-3.5 h-3.5" />
             <span>SATISFACTION CLIENT</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1F1C18] tracking-tight mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1F1C18] tracking-tight mb-2.5">
             Ce que disent nos clients
           </h2>
-          <p className="text-base sm:text-lg text-[#615344] leading-relaxed">
-            La réputation d’un artisan se forge sur la satisfaction de chaque foyer. 
-            Découvrez les retours d’expérience de nos clients à Dozulé, Cabourg et Houlgate.
+          <p className="text-sm sm:text-base text-[#615344] leading-relaxed max-w-2xl mx-auto">
+            Découvrez les retours d'expérience de nos clients à Dozulé, Cabourg et Houlgate.
           </p>
-
-          {/* Rating Badge */}
-          <div className="mt-6 inline-flex items-center gap-3 bg-white px-5 py-2.5 rounded-2xl border border-[#E0D3C0] shadow-xs">
-            <div className="flex text-[#F59E0B]">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-[#F59E0B]" />
-              ))}
-            </div>
-            <div className="text-left">
-              <div className="text-sm font-bold text-[#1F1C18]">5.0 / 5 — 100% Avis Positifs</div>
-              <div className="text-[11px] text-[#6B7280]">Recommandé par nos clients en Normandie</div>
-            </div>
-          </div>
         </div>
 
-        {/* Reviews Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Mobile Swipeable Carousel & Desktop 3-Column Grid */}
+        <div
+          ref={scrollContainerRef}
+          onScroll={handleScroll}
+          className="flex md:grid md:grid-cols-3 gap-4 lg:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-2 md:pb-0 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0"
+        >
           {REVIEWS.map((review) => (
             <div
               key={review.id}
               id={`review-card-${review.id}`}
-              className="bg-white rounded-2xl p-7 border border-[#E2D6C5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between relative"
+              className="w-[85vw] max-w-[340px] shrink-0 snap-center md:w-auto md:max-w-none md:shrink md:snap-align-none bg-white rounded-2xl p-5 sm:p-6 border border-[#E2D6C5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between relative"
             >
               <div>
                 {/* Header of review: Stars & Quote icon */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex text-[#F59E0B]">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex text-[#F59E0B]" aria-label={`${review.rating} étoiles sur 5`}>
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-[#F59E0B]" />
                     ))}
                   </div>
-                  <Quote className="w-7 h-7 text-[#E5DACB]" />
+                  <Quote className="w-6 h-6 text-[#E5DACB]" />
                 </div>
 
-                {/* Highlight banner if exists */}
-                {review.highlight && (
-                  <div className="text-xs font-bold text-[#92400E] bg-[#FEF3C7] px-3 py-1 rounded-md mb-3 inline-block">
-                    "{review.highlight}"
-                  </div>
-                )}
-
                 {/* Review Text */}
-                <p className="text-sm text-[#4E4135] leading-relaxed mb-6 italic">
+                <p className="text-xs sm:text-sm text-[#4E4135] leading-relaxed mb-4 italic">
                   « {review.content} »
                 </p>
               </div>
 
               {/* Review Author & Project */}
-              <div className="pt-4 border-t border-[#F0E6D8]">
+              <div className="pt-3 border-t border-[#F0E6D8]">
                 <div className="flex items-center justify-between mb-1">
                   <span className="font-bold text-sm text-[#1F1C18]">
                     {review.author}
                   </span>
-                  <span className="text-[11px] text-[#9CA3AF]">
-                    {review.date}
-                  </span>
-                </div>
-                <div className="text-xs text-[#786C5E] flex items-center justify-between">
-                  <span>{review.location}</span>
-                  <span className="text-[11px] font-semibold text-[#15803D] flex items-center gap-1">
+                  <span className="text-[11px] font-medium text-[#15803D] flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5" />
-                    Avis Vérifié
+                    Avis vérifié
                   </span>
                 </div>
-                <div className="mt-2 text-[11px] font-medium text-[#92400E] bg-[#FAF7F2] p-1.5 rounded-sm">
+                <div className="text-xs text-[#786C5E] mb-2">
+                  {review.location}
+                </div>
+                <div className="text-[11px] font-medium text-[#92400E] bg-[#FAF7F2] p-2 rounded-lg border border-[#EFE5D8] leading-snug">
                   Projet : {review.projectType}
                 </div>
               </div>
@@ -93,12 +95,33 @@ export const Reviews: React.FC = () => {
           ))}
         </div>
 
-        {/* Small trust banner */}
-        <div className="mt-12 text-center">
-          <p className="text-xs text-[#786C5E] inline-flex items-center gap-1.5">
-            <MessageSquareText className="w-4 h-4 text-[#92400E]" />
-            Vous avez réalisé un chantier avec Jimmy Datin ? Partagez également votre avis sur notre page Facebook.
-          </p>
+        {/* Mobile pagination dots (only visible on mobile < md) */}
+        <div className="flex md:hidden items-center justify-center gap-2 mt-4">
+          {REVIEWS.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => scrollToIndex(index)}
+              aria-label={`Aller au témoignage ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                activeIndex === index ? 'w-6 bg-[#92400E]' : 'w-2 bg-[#D1C7BA]'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Discreet Google Profile Link */}
+        <div className="mt-7 text-center">
+          <a
+            id="reviews-google-link"
+            href="https://share.google/GICNJNUCEw7Ja8ckr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-[#92400E] hover:text-[#78350F] hover:underline underline-offset-4 transition-colors"
+          >
+            <span>Voir tous nos avis sur Google</span>
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
 
       </div>
