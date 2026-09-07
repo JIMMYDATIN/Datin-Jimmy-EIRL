@@ -105,6 +105,8 @@ export const Hero: React.FC = () => {
                   className="w-full h-full object-cover"
                   containerClassName="h-full w-full"
                   badge="Colombages en chêne"
+                  width={550}
+                  height={550}
                   loading="eager"
                   fetchPriority="high"
                 />

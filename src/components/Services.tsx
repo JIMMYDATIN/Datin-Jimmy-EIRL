@@ -55,8 +55,8 @@ export const Services: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   containerClassName="h-full w-full"
                   badge={service.badge}
-                  width={800}
-                  height={600}
+                  width={640}
+                  height={480}
                 />
               </div>
 

@@ -1,50 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Services } from './components/Services';
-import { WhyChooseUs } from './components/WhyChooseUs';
-import { Reviews } from './components/Reviews';
-import { InterventionZone } from './components/InterventionZone';
-import { QuoteForm } from './components/QuoteForm';
-import { Footer } from './components/Footer';
-import { LegalModal } from './components/LegalModal';
 import { Phone, FileText } from 'lucide-react';
 import { COMPANY_INFO } from './data/menuiserieData';
+
+// Below-the-fold components are lazy loaded to shrink initial bundle and accelerate FCP
+const Services = lazy(() => import('./components/Services').then(m => ({ default: m.Services })));
+const WhyChooseUs = lazy(() => import('./components/WhyChooseUs').then(m => ({ default: m.WhyChooseUs })));
+const Reviews = lazy(() => import('./components/Reviews').then(m => ({ default: m.Reviews })));
+const InterventionZone = lazy(() => import('./components/InterventionZone').then(m => ({ default: m.InterventionZone })));
+const QuoteForm = lazy(() => import('./components/QuoteForm').then(m => ({ default: m.QuoteForm })));
+const Footer = lazy(() => import('./components/Footer').then(m => ({ default: m.Footer })));
+const LegalModal = lazy(() => import('./components/LegalModal').then(m => ({ default: m.LegalModal })));
 
 export default function App() {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
 
+  useEffect(() => {
+    // Non-blocking prefetch of remaining sections right after initial display
+    const prefetch = () => {
+      import('./components/Services');
+      import('./components/WhyChooseUs');
+      import('./components/Reviews');
+      import('./components/InterventionZone');
+      import('./components/QuoteForm');
+      import('./components/Footer');
+    };
+
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        (window as unknown as { requestIdleCallback: (cb: () => void) => void }).requestIdleCallback(prefetch);
+      } else {
+        setTimeout(prefetch, 50);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAF7F2] text-[#24211D] flex flex-col selection:bg-[#92400E] selection:text-white">
-      {/* Sticky Header with Navigation & Quick Phone Call */}
+      {/* Sticky Header with Navigation & Quick Phone Call - Loaded immediately */}
       <Navbar />
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* 1. Hero Banner */}
+        {/* 1. Hero Banner - Loaded immediately for optimal FCP & LCP */}
         <Hero />
 
         {/* 2. Notre Savoir-Faire (Services) */}
-        <Services />
+        <Suspense fallback={<div className="min-h-[300px] bg-[#F5EFE6]" />}>
+          <Services />
+        </Suspense>
 
         {/* 3. Pourquoi Nous Choisir (Qualibat RGE & ISOVER) */}
-        <WhyChooseUs />
+        <Suspense fallback={<div className="min-h-[300px] bg-[#FAF7F2]" />}>
+          <WhyChooseUs />
+        </Suspense>
 
         {/* 4. Avis Clients (Témoignages) */}
-        <Reviews />
+        <Suspense fallback={<div className="min-h-[250px] bg-[#F5EFE6]" />}>
+          <Reviews />
+        </Suspense>
 
         {/* 6. Zone d'intervention (Carte Google Maps & Communes) */}
-        <InterventionZone />
+        <Suspense fallback={<div className="min-h-[350px] bg-[#FAF7F2]" />}>
+          <InterventionZone />
+        </Suspense>
 
         {/* 7. Demander un devis (Formulaire interactif) */}
-        <QuoteForm />
+        <Suspense fallback={<div className="min-h-[350px] bg-[#F5EFE6]" />}>
+          <QuoteForm />
+        </Suspense>
       </main>
 
       {/* Footer */}
-      <Footer onOpenLegal={() => setIsLegalOpen(true)} />
+      <Suspense fallback={<div className="min-h-[200px] bg-[#1C1814]" />}>
+        <Footer onOpenLegal={() => setIsLegalOpen(true)} />
+      </Suspense>
 
-      {/* Legal Notice Modal */}
-      <LegalModal isOpen={isLegalOpen} onClose={() => setIsLegalOpen(false)} />
+      {/* Legal Notice Modal - Only downloaded when opened */}
+      {isLegalOpen && (
+        <Suspense fallback={null}>
+          <LegalModal isOpen={isLegalOpen} onClose={() => setIsLegalOpen(false)} />
+        </Suspense>
+      )}
 
       {/* Floating Action Buttons for Mobile Screen */}
       <div className="md:hidden fixed bottom-4 left-4 right-4 z-40 flex gap-2">
