@@ -93,8 +93,14 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-3 group focus:outline-hidden"
             id="brand-logo-link"
           >
-            <div className="w-10 h-10 rounded-lg bg-[#261E17] text-[#FAF7F2] flex items-center justify-center font-bold text-lg shadow-sm border border-[#78350F] group-hover:bg-[#92400E] transition-colors">
-              <span className="font-display tracking-tight">DJ</span>
+            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs border border-[#E5DACB] group-hover:scale-105 transition-transform flex items-center justify-center bg-[#F3EAD9] shrink-0">
+              <img
+                src="/icon-colombage-facade.svg"
+                alt="Logo Menuiserie Datin J."
+                width={40}
+                height={40}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">

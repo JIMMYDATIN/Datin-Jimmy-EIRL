@@ -22,8 +22,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-[#92400E] text-white flex items-center justify-center font-display font-bold text-lg shadow-xs">
-                  DJ
+                <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs border border-white/10 flex items-center justify-center bg-[#F3EAD9] shrink-0">
+                  <img
+                    src="/icon-colombage-facade.svg"
+                    alt="Logo Menuiserie Datin J."
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <span className="font-display font-bold text-lg text-white block">

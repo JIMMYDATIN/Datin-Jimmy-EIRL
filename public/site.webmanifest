@@ -1,0 +1,28 @@
+{
+  "name": "Menuiserie Datin J.",
+  "short_name": "Datin J.",
+  "description": "Menuiserie artisanale, charpente et isolation RGE à Dozulé",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#92400E",
+  "icons": [
+    {
+      "src": "/icon-colombage-facade.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
