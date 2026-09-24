@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Autorisation explicite pour les images et favicon par Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+
+Sitemap: https://main--jazzy-crumble-9912e1.netlify.app/sitemap.xml

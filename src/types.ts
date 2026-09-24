@@ -7,6 +7,7 @@ export interface ServiceItem {
   benefits: string[];
   materials: string[];
   imageSrc: string;
+  imageAlt?: string;
   badge?: string;
 }
 

@@ -51,7 +51,7 @@ export const Services: React.FC = () => {
                 <SmartImage
                   src={service.imageSrc}
                   fallbackSrc={fallbackImages[service.id]}
-                  alt={`${service.title} - Menuiserie Datin J. à Dozulé`}
+                  alt={service.imageAlt || `${service.title} - Menuiserie Datin J. à Dozulé`}
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   containerClassName="h-full w-full"
                   badge={service.badge}

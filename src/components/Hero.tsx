@@ -97,7 +97,7 @@ export const Hero: React.FC = () => {
                 <SmartImage
                   src="/maison1.webp"
                   fallbackSrc="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Charpente et menuiserie artisanale - Menuiserie Datin J. à Dozulé"
+                  alt="Maison normande avec colombages traditionnels en chêne et charpente bois taillée à Dozulé par Jimmy Datin - Menuiserie Datin J."
                   className="w-full h-full object-cover"
                   containerClassName="h-full w-full"
                   badge="Colombages en chêne"

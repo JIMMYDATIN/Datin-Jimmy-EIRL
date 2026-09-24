@@ -37,7 +37,8 @@ export const SERVICES: ServiceItem[] = [
       'Pose et rénovation de parquets massifs et contrecollés'
     ],
     materials: ['Chêne massif de pays', 'Frêne', 'Châtaignier', 'Aluminium thermo-laqué', 'PVC renforcé', 'Quincaillerie haute précision'],
-    imageSrc: '/PORTAIL1.webp'
+    imageSrc: '/PORTAIL1.webp',
+    imageAlt: 'Fabrication et pose de portail et menuiserie extérieure en bois sur mesure à Dozulé par Jimmy Datin'
   },
   {
     id: 'charpente',
@@ -53,7 +54,8 @@ export const SERVICES: ServiceItem[] = [
       'Taillage en atelier et levage sécurisé sur chantier'
     ],
     materials: ['Chêne de structure', 'Sapin du Nord', 'Bois Douglas', 'Épicéa certifié PEFC', 'Assemblages traditionnels'],
-    imageSrc: '/CHARPENTES1.webp'
+    imageSrc: '/CHARPENTES1.webp',
+    imageAlt: 'Taillage traditionnel en atelier et levage de charpente en bois massif et colombages à Dozulé par Menuiserie Datin J.'
   },
   {
     id: 'isolation',
@@ -69,7 +71,8 @@ export const SERVICES: ServiceItem[] = [
       'Éligibilité complète aux aides de l\'État (MaPrimeRénov\', CEE)'
     ],
     materials: ['Laine de verre ISOVER haute performance', 'Laine de roche', 'Fibre de bois biosourcée', 'Membranes hygro-régulantes'],
-    imageSrc: '/ISOLATION1.webp'
+    imageSrc: '/ISOLATION1.webp',
+    imageAlt: 'Travaux d\'isolation thermique des combles et toitures certifiés RGE Qualibat et partenaire ISOVER dans le Calvados'
   },
   {
     id: 'hors-norme',

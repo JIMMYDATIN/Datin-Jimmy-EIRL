@@ -19,6 +19,7 @@ export const QuoteForm: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [submittedRef, setSubmittedRef] = useState('');
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -83,17 +84,64 @@ export const QuoteForm: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
-    // Simulate network submission with realistic delay
-    setTimeout(() => {
+    const generatedRef = `DEV-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+
+    const projectTypesMap: Record<string, string> = {
+      'fenetres-portes': 'Menuiserie (Fenêtres, Portes, Meubles, Dressings, Cuisines, Parquets)',
+      'menuiserie': 'Menuiserie (Fenêtres, Portes, Meubles, Dressings, Cuisines, Parquets)',
+      'charpente': 'Charpente (Traditionnelle, Rénovation toiture, Extension ossature bois)',
+      'isolation': 'Isolation thermique & phonique (ISOVER / Qualibat RGE)',
+      'hors-norme': 'Une demande spécifique (Création sur-mesure, ouvrage singulier)',
+      'autre': 'Autre projet / Renseignement'
+    };
+
+    const timeframeMap: Record<string, string> = {
+      'urgent': 'Dès que possible (Urgent)',
+      'dans-les-3-mois': 'Dans les 1 à 3 mois',
+      'dans-les-6-mois': 'Dans les 6 mois',
+      'etude': 'Simple étude préalable / Estimation budgétaire'
+    };
+
+    try {
+      const response = await fetch("https://formspree.io/f/mgavzedr", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `Nouvelle demande de devis : ${formData.fullName} - ${formData.city}`,
+          nom_complet: formData.fullName,
+          telephone: formData.phone,
+          email: formData.email,
+          ville_chantier: formData.city,
+          type_projet: projectTypesMap[formData.projectType] || formData.projectType,
+          delai_souhaite: timeframeMap[formData.timeframe] || formData.timeframe,
+          description_besoin: formData.description,
+          souhaite_conseils_rge: formData.wantsRgeAdvice ? "Oui (Intéressé par les aides MaPrimeRénov' / CEE)" : "Non",
+          reference_dossier: generatedRef,
+          photo_jointe_nom: formData.uploadedPhotoName || "Aucun fichier joint"
+        })
+      });
+
+      if (response.ok) {
+        setSubmittedRef(generatedRef);
+        setIsSuccess(true);
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || "Une erreur est survenue lors de l'envoi vers Formspree.");
+      }
+    } catch (err: unknown) {
+      console.error("Erreur d'envoi du formulaire:", err);
+      setErrorMessage("Une erreur réseau est survenue lors de l'envoi de votre demande. Vous pouvez contacter Jimmy Datin directement au 07 43 64 14 13.");
+    } finally {
       setIsSubmitting(false);
-      const generatedRef = `DEV-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
-      setSubmittedRef(generatedRef);
-      setIsSuccess(true);
-    }, 1200);
+    }
   };
 
   const resetForm = () => {
@@ -109,6 +157,7 @@ export const QuoteForm: React.FC = () => {
       uploadedPhotoName: '',
       uploadedPhotoPreview: ''
     });
+    setErrorMessage(null);
     setIsSuccess(false);
   };
 
@@ -392,6 +441,16 @@ export const QuoteForm: React.FC = () => {
                   </div>
                 )}
               </div>
+
+              {/* Error Message Banner if any */}
+              {errorMessage && (
+                <div className="p-4 rounded-xl bg-[#FEF2F2] border border-[#FCA5A5] text-[#991B1B] text-xs sm:text-sm flex items-start gap-3 animate-in fade-in-50 duration-200">
+                  <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-[#DC2626]" />
+                  <div className="flex-1">
+                    <p className="font-semibold">{errorMessage}</p>
+                  </div>
+                </div>
+              )}
 
               {/* Submit Button */}
               <div className="pt-2">
