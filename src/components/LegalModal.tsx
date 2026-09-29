@@ -90,7 +90,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose }) => {
               4. Propriété intellectuelle & Droits d'auteur
             </h4>
             <p>
-              L’ensemble des contenus, textes, logos et photographies présents sur ce site sont la propriété exclusive de l'EIRL Datin Jimmy ou de ses partenaires. La structure, l'ergonomie, les graphismes et le code source du site sont la propriété intellectuelle de <strong>Hugo Fournier EI</strong>. Toute reproduction ou utilisation non autorisée est strictement interdite.
+              L’ensemble des contenus, textes, logos et photographies présents sur ce site sont la propriété exclusive de l'EIRL Datin Jimmy ou de ses partenaires. La structure, l'ergonomie, les graphismes et le code source du site sont la propriété intellectuelle de <strong>l'EIRL Datin Jimmy</strong>. Toute reproduction ou utilisation non autorisée est strictement interdite.
             </p>
           </div>
 
