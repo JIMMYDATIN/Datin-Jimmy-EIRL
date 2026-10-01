@@ -97,12 +97,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
           {/* Contact Details */}
           <div className="lg:col-span-4">
             <h3 className="font-display text-sm font-bold uppercase tracking-wider mb-4 text-[#FDE68A]">
-              Coordonnées de l'Atelier
+              Coordonnées de notre bureau
             </h3>
             <ul className="space-y-3 text-xs text-[#C4B5A5]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#EA580C] shrink-0 mt-0.5" />
-                <span>Menuiserie Datin J., 14430 Dozulé, Calvados (Normandie)</span>
+                <span>Menuiserie Datin, 83 Grande Rue, 14430 Dozulé</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#92400E] shrink-0" />
